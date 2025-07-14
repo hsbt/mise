@@ -441,6 +441,13 @@ cmd link help="Symlinks a tool version into mise" {
     arg <TOOL@VERSION> help="Tool name and version to create a symlink for"
     arg <PATH> help="The local path to the tool version\ne.g.: ~/.nvm/versions/node/v20.0.0"
 }
+cmd lock help="Create a lockfile" {
+    long_help "Create a lockfile\n\nThis command creates an empty mise.lock file in the current directory.\nLockfiles are used to pin tool versions for reproducible environments."
+    after_long_help "Examples:\n\n    $ mise lock\n    Created lockfile mise.lock\n\n    $ mise lock --file my-project.lock\n    Created lockfile my-project.lock\n"
+    flag "-f --file" help="The lockfile to create" {
+        arg <FILE>
+    }
+}
 cmd local hide=#true help="Sets/gets tool version in local .tool-versions or mise.toml" {
     alias l hide=#true
     long_help "Sets/gets tool version in local .tool-versions or mise.toml\n\nUse this to set a tool's version when within a directory\nUse `mise global` to set a tool version globally\nThis uses `.tool-version` by default unless there is a `mise.toml` file or if `MISE_USE_TOML`\nis set. A future v2 release of mise will default to using `mise.toml`."

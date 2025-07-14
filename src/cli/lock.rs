@@ -18,15 +18,15 @@ pub struct Lock {
 impl Lock {
     pub async fn run(self) -> Result<()> {
         let lockfile_path = Path::new(&self.file);
-        
+
         if lockfile_path.exists() {
             eprintln!("Lockfile {} already exists", self.file);
             return Ok(());
         }
-        
+
         file::write(lockfile_path, "")
             .with_context(|| format!("Failed to create lockfile {}", self.file))?;
-        
+
         eprintln!("Created lockfile {}", self.file);
         Ok(())
     }

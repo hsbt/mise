@@ -1353,6 +1353,21 @@ const completionSpec: Fig.Spec = {
       ],
     },
     {
+      name: "lock",
+      description: "Create a lockfile",
+      options: [
+        {
+          name: ["-f", "--file"],
+          description: "The lockfile to create",
+          isRepeatable: false,
+          args: {
+            name: "file",
+            template: "filepaths",
+          },
+        },
+      ],
+    },
+    {
       name: ["ls", "list"],
       description: "List installed and active tool versions",
       options: [
