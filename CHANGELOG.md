@@ -1,9 +1,24 @@
 # Changelog
 
+## [2025.7.13](https://github.com/jdx/mise/compare/v2025.7.12..v2025.7.13) - 2025-07-18
+
+### 🐛 Bug Fixes
+
+- don't follow symlink to ignore symlinks from deletion by [@risu729](https://github.com/risu729) in [#5672](https://github.com/jdx/mise/pull/5672)
+
+### 📚 Documentation
+
+- fix typo in RUSTUP_TOOLCHAIN env variable name by [@anderso](https://github.com/anderso) in [#5673](https://github.com/jdx/mise/pull/5673)
+
+### New Contributors
+
+- @anderso made their first contribution in [#5673](https://github.com/jdx/mise/pull/5673)
+
 ## [2025.7.12](https://github.com/jdx/mise/compare/v2025.7.11..v2025.7.12) - 2025-07-17
 
 ### 🐛 Bug Fixes
 
+- **(file)** remove top level directories in strip_archive_path_components by [@risu729](https://github.com/risu729) in [#5662](https://github.com/jdx/mise/pull/5662)
 - **(npm)** run bun in install_path instead of using --cwd flag of bun by [@risu729](https://github.com/risu729) in [#5656](https://github.com/jdx/mise/pull/5656)
 - **(nushell)** fix `get -i` deprecation by [@JoaquinTrinanes](https://github.com/JoaquinTrinanes) in [#5666](https://github.com/jdx/mise/pull/5666)
 
